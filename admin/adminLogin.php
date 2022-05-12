@@ -10,7 +10,7 @@
   <body>
     <div class="login-box">
       <h1>Login</h1>
-      <form action="#action">
+      <form action="../includes/validate.php" method="POST">
         <input type="text" name="username" placeholder="Username" /><br />
         <input type="password" name="password" placeholder="Password" /><br />
         <input class="login" type="submit" value="Login" />

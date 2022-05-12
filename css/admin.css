@@ -25,7 +25,7 @@ input[type="password"] {
 }
 .login-box input[type="submit"] {
   width: 150%;
-  background-color: #4caf50;
+  background-color: rgb(74, 185, 213);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -34,12 +34,13 @@ input[type="password"] {
   cursor: pointer;
 }
 .login-box input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #50b9e9;
 }
 .login-box h1 {
   float: left;
   font-size: 40px;
-  border-bottom: 2px solid #45a049;
+  border-bottom: 2px solid rgb(74, 185, 213);
+
   margin-bottom: 50px;
   padding: 13px;
 }
