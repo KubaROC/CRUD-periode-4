@@ -40,7 +40,155 @@ input[type="password"] {
   float: left;
   font-size: 40px;
   border-bottom: 2px solid rgb(74, 185, 213);
-
   margin-bottom: 50px;
   padding: 13px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(74, 185, 213);
+  height: 69px;
+  width: 100%;
+}
+.navbar p {
+  color: white;
+  font-size: 17px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 35%;
+}
+.link a {
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid rgb(36, 35, 35);
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.options {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.open {
+  background-color: rgb(22, 210, 126);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 15px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 177px;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+}
+.send {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 127px;
+  right: 15px;
+  width: 284px;
+}
+
+.add {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 127px;
+  right: 15px;
+  width: 284px;
+}
+.edit {
+  background-color: #c7b834;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 75px;
+  right: 15px;
+  width: 284px;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 15px;
+  width: 284px;
+}
+.form-popup input[type="text"] {
+  width: 280px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
