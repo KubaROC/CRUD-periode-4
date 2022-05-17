@@ -8,6 +8,7 @@ include_once('../includes/connection.php'); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/admin.css" />
     <title>Admin page</title>
+    <script src="../js/script.js"></script>
   </head>
   <body>
     <div class="navbar">
@@ -89,25 +90,7 @@ include_once('../includes/connection.php'); ?>
   <button type="button" class="delete" onclick="openDelete()">Verwijder</button> 
   </form> 
 </div>
-<script>
-function openForm() {
-  document.getElementById("nieuw").style.display = "block";
-  document.getElementById("button-nieuw").style.display = "none";
-} 
-function openEdit() {
-  document.getElementById("edit").style.display = "block";
-  document.getElementById("button-nieuw").style.display = "none";
-} 
-function openDelete() {
-  document.getElementById("delete").style.display = "block";
-  document.getElementById("button-nieuw").style.display = "none";
-} 
 
-function options() {
-  document.getElementById("options").style.display = "block";
-}
-
-</script>
 
   </body>
 </html>
