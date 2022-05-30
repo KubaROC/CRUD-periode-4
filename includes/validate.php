@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
       
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM admin WHERE username = :username");
+    $stmt = $conn->prepare("SELECT * FROM gebruikers WHERE username = :username");
     $stmt->bindParam(':username', $username);
     $stmt->execute();
     $user = $stmt->fetch();

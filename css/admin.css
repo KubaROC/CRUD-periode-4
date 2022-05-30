@@ -4,6 +4,9 @@ html {
 body {
   font-family: sans-serif;
 }
+.main {
+  display: flex;
+}
 .login-box {
   position: absolute;
   top: 35%;
@@ -164,24 +167,18 @@ tr:nth-child(even) {
   background-color: #c7b834;
   color: white;
   padding: 16px 20px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
-  position: fixed;
-  bottom: 75px;
-  right: 15px;
-  width: 284px;
 }
 
 .delete {
   background-color: red;
   color: white;
   padding: 16px 20px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
-  position: fixed;
-  bottom: 23px;
-  right: 15px;
-  width: 284px;
 }
 .form-popup input[type="text"] {
   width: 280px;
@@ -191,4 +188,15 @@ tr:nth-child(even) {
   align-items: center;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+.vlucht-box {
+  border-radius: 25px;
+  background: rgb(53, 165, 193);
+  padding: 20px;
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
 }

@@ -23,30 +23,26 @@ include_once('../includes/connection.php'); ?>
       </div>
     </div>
     <div class="main">
-    <table>
-        <tr>
-          <th>Locatie<js/th>
-          <th>tijd</th>
-          <th>prijs</th>
-          <th>ID</th>
-          </tr>
+
     <?php  
-    $sql = 'SELECT * FROM vluchten';
+    $sql = 'SELECT * FROM reizen';
     
     foreach ($conn->query($sql) as $row) {
-      echo("<tr>");
-      echo("<td>" . $row['locatie']. "</td>");
-      echo("<td>" . $row['tijden']. "</td>");
-      echo("<td>" . $row['prijs']. "</td>");
-      echo("<td>" . $row['id']. "</td>");
-      echo("</tr>");
+      echo("<div class='vlucht-box'>");
+      echo("<h1>" . $row['locatie']. "</h1>");
+      echo("<p>" . $row['beginDatum'] . " t/m " .$row['eindDatum']. "</p>");
+      echo("<p>" ."reis ID ". $row['reisID']. "</p>");
+      echo("<h3> $ " . $row['prijs']. ",-</h3>");
+      echo ("<button class='edit' onclick='openEdit()'>Edit</button>");
+      echo("</div>");
     }
     ?>
+    
     </div>
     <button class="open" onclick="options()">opties</button>
 
 <div class="form-popup" id="nieuw">
-  <form action="/action_page.php" class="form-container">
+  <form action="../php/addFlight.php" class="form-container" method="POST">
 
     <label>Verbinding tussen</label>
     <input type="text" placeholder="vertrek plek + aankomst plek" name="locatie" required></br>
@@ -76,7 +72,7 @@ include_once('../includes/connection.php'); ?>
   </form>
 </div>
 <div class="form-popup" id="delete">
-  <form action="/action_page.php" class="form-container">
+  <form action="../php/remove.php" class="form-container" method="POST">
     <label>ID</label>
     <input type="text" placeholder="ID" name="id" required>
 

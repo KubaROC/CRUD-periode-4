@@ -3,13 +3,13 @@
 $conn = "";
    
 try {
-    $servername = "sql11.freemysqlhosting.net:3306";
-    $dbname = "sql11491761";
-    $username = "sql11491761";
-    $password = "m19jbnPaHI";
+    $servername = "localhost:3306";
+    $dbname = "crud";
+    $username = "root";
+    $password = "";
    
     $conn = new PDO(
-        "mysql:host=$servername; dbname=sql11491761",
+        "mysql:host=$servername; dbname=crud",
         $username, $password
     );
       
