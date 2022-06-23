@@ -21,17 +21,7 @@
   </head>
 <body>
     <div class="pagina">
-      <div class="navbar">
-        <div class="logo">
-          <p>Logo</p>
-        </div>
-        <div class="link">
-          <a href="index.html"><p>Home</p></a>
-          <a href="overons.php"><p>Over ons</p></a>
-          <a href="reizen.php"><p>Reizen</p></a>
-          <a href="contact.html"><p>Contact</p></a>
-        </div>
-      </div>
+    <?php include('./includes/header.php'); ?>
       <div class="contactcontainer">
         <div class="afbeeldingcontact">
             <img src="Images/contactafbeelding.jpg" />
@@ -50,22 +40,30 @@
             </div>
           </div>
           <div class="contactrechts">
-            <form>
-              <label>Voornaam</label>
-              <input type="text" name="voornaam" />
-              <label>Achternaam</label>
-              <input type="text" name="achternaam" />
-              <label>Bericht</label>
-              <input type="text" name="bericht"/>
-              <button type="submit">Verzenden</button>
-            </form>
-          </div> 
-            
+            <?php 
+              if (isset($_GET['bericht'])) {
+            ?>
+              <p>Bericht verzonden</p>
+              <p>Wij zullen uw bericht zo snel mogelijk beantwoorden</p>
+              <p>Wilt u nog een bericht sturen? Refresh dan de pagina</p>
+
+            <?php 
+              } else {
+            ?>
+              <form action="php/addReview.php" method="post">
+                <label>Naam</label>
+                <input type="text" name="naam" />
+                <label>Bericht</label>
+                <input type="text" name="bericht"/>
+                <button type="submit" name="submit" >Verzenden</button>
+              </form>
+            <?php
+              }
+            ?>
+          </div>   
         </div>
       </div>
     <div>
-    <footer>
-      <p>@Reisorganisatie X</p>
-    </footer>
+    <?php include('./includes/footer.php'); ?>
 </body>
 </html>

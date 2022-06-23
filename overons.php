@@ -21,20 +21,10 @@
   </head>
   <body>
     <div class="pagina">
-      <div class="navbar">
-        <div class="logo">
-          <p>Logo</p>
-        </div>
-        <div class="link">
-          <a href="index.html"><p>Home</p></a>
-          <a href="overons.php"><p>Over ons</p></a>
-          <a href="reizen.php"><p>Reizen</p></a>
-          <a href="contact.html"><p>Contact</p></a>
-        </div>
-      </div>
+      <?php include('./includes/header.php'); ?>
       <div class="overonsimg">
         <div class="overonsimglogo">
-          <p>Logo</p>
+          <img src="./Images/logo.png" width="350" height="350">
         </div>
         <img src="Images/overonsimg3.jpg" />
       </div>
@@ -100,8 +90,6 @@
         </div>
       </div>
     </div>
-    <footer>
-      <p>@Reisorganisatie X</p>
-    </footer>
+    <?php include('./includes/footer.php'); ?>
   </body>
 </html>

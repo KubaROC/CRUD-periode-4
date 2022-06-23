@@ -3,7 +3,7 @@
 $conn = "";
    
 try {
-    $servername = "localhost";
+    $servername = "localhost:3306";
     $dbname = "crud";
     $username = "root";
     $password = "";
