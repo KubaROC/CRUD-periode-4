@@ -1,8 +1,8 @@
 <?php
 include_once('../includes/connection.php'); 
-    $sql = ("DELETE FROM vluchten WHERE id =:id");
+    $sql = ("DELETE FROM reizen WHERE reisID =:reisID");
     $stmt = $conn -> prepare($sql);
-    $stmt -> bindParam(":id", $_POST['id']);
+    $stmt -> bindParam(":reisID", $_POST['reisID']);
     $stmt -> execute();
     header("Location: ../admin/vluchten.php");
 ?>

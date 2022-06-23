@@ -18,75 +18,100 @@ include_once('../includes/connection.php'); ?>
       <div class="link">
         <a href="admin.php"><p>Home</p></a>
         <a href="vluchten.php"><p>Vluchten</p></a>
-        <a href="reizen.php"><p>EMPTY</p></a>
+        <a href="gebruikers.php"><p>Gebruikers</p></a>
         <a href="contact.php"><p>EMPTY</p></a>
       </div>
     </div>
     <div class="main">
 
+
+
     <?php  
     $sql = 'SELECT * FROM reizen';
+    $count = 0;
     
     foreach ($conn->query($sql) as $row) {
       echo("<div class='vlucht-box'>");
       echo("<h1>" . $row['locatie']. "</h1>");
-      echo("<p>" . $row['beginDatum'] . " t/m " .$row['eindDatum']. "</p>");
+      echo("<p>" . $row['vertrektijd'] . " t/m " .$row['aankomsttijd']. "</p>");
       echo("<p>" ."reis ID ". $row['reisID']. "</p>");
-      echo("<h3> $ " . $row['prijs']. ",-</h3>");
-      echo ("<button class='edit' onclick='openEdit()'>Edit</button>");
+      echo("<h3> € " . $row['prijs']. ",-</h3>");
+      echo ("<button class='edit' onclick='vluchtInfo(".$count.")'>Edit</button>");
       echo("</div>");
+      echo("<div class='vlucht-info'>");
+      echo("<form method='POST'>");
+      echo("<label>" . 'locatie' . "</label>");
+      echo("<br>");
+      echo ("<input name='locatie' value='".$row['locatie']."'></input>");
+      echo("<br>");
+      echo("<br>");
+      echo("<label>" . 'Beschrijving' . "</label>");
+      echo("<br>");
+      echo("<br>");
+      echo ("<textarea name='beschrijving'> ".$row['beschrijving']."</textarea>");
+      echo("<div class='form-extended'>");
+      echo("<label>" . 'Reis ID' . "</label>");
+      echo("<br>");
+      echo ("<input name='reisID' value='".$row['reisID']."'></input>");
+      echo("<br>");
+      echo("<br>");
+      echo("<div>");
+      echo("<label>" . 'Vertrek datum' . "</label>");
+      echo("<br>");
+      echo("<input name='vertrektijd' value='".$row['vertrektijd']."' type='datetime-local'>");
+      echo("<br>");
+      echo("<br>");
+      echo("<label>" . 'Aankomst datum' . "</label>");
+      echo("<br>");
+      echo("<input name='aankomsttijd' value='".$row['aankomsttijd']."' type='datetime-local' >");
+      echo("<br>");
+      echo("<br>");
+      echo("<label>" . 'Prijs' . "</label>");
+      echo("<br>");
+      echo ("<input name='prijs' value='".$row['prijs']."'></input>");
+      echo("</div>"); 
+      echo("</div>");
+      echo("<input class='editForm' type='submit' value='Edit' formaction='../php/updateFlight.php'>");
+      echo("<input class='deleteForm' type='submit' value='Delete' formaction='../php/remove.php'>");
+      echo("</form>");
+      echo("</div>");
+      $count++;
     }
     ?>
-    
+  <button class="add" onclick="vluchtAdd()">Add</button>
+    <div class="vlucht-add" id="vlucht-add">
+  <form action="../php/addFlight.php" method="POST">
+  <label>Locatie</label>
+  <br>
+  <input name="locatie"></input>
+  <br>
+  <br>
+  <label>Beschrijving</label>
+  <br>
+  <br>
+  <textarea name="beschrijving"></textarea>
+  <div class="form-extended">
+  <br>
+  <br>
+  <div>
+  <label>Vertrek datum</label>
+  <br>
+  <input name="vertrektijd"type="datetime-local">
+  <br>
+  <br>
+  <label>Aankomst datum</label>
+  <br>
+  <input name="aankomsttijd" type="datetime-local" >
+  <br>
+  <br>
+  <label>Prijs</label>
+  <br>
+  <input name="prijs"></input>
+  </div> 
+  </div>
+  <input class="addForm" type="submit" value="Add">
+  </form>
+  </div>
     </div>
-    <button class="open" onclick="options()">opties</button>
-
-<div class="form-popup" id="nieuw">
-  <form action="../php/addFlight.php" class="form-container" method="POST">
-
-    <label>Verbinding tussen</label>
-    <input type="text" placeholder="vertrek plek + aankomst plek" name="locatie" required></br>
-
-    <label>Datum</label>
-    <input type="text" placeholder="Vertrek datum + aankomst datum" name="datum" required>
-    <label>Prijs</label>
-    <input type="text" placeholder="Prijs" name="prijs" required>
-
-    <button type="submit" class="send">voeg toe</button>
-  </form>
-</div>
-<div class="form-popup" id="edit">
-  <form action="/action_page.php" class="form-container">
-
-    <label>Verbinding tussen</label>
-    <input type="text" placeholder="vertrek plek + aankomst plek" name="locatie" required></br>
-
-    <label>Datum</label>
-    <input type="text" placeholder="Vertrek datum + aankomst datum" name="datum" required>
-    <label>Prijs</label>
-    <input type="text" placeholder="Prijs" name="prijs" required>
-    <label>ID</label>
-    <input type="text" placeholder="ID" name="id" required>
-
-    <button type="submit" class="send">Edit</button>
-  </form>
-</div>
-<div class="form-popup" id="delete">
-  <form action="../php/remove.php" class="form-container" method="POST">
-    <label>ID</label>
-    <input type="text" placeholder="ID" name="id" required>
-
-    <button type="submit" class="send">Verwijder</button>
-  </form>
-</div>
-<div class="options" id="options">
-  <form>
-  <button type="button" class="add" id="button-nieuw" onclick="openForm()">Nieuw</button>
-  <button type="button" class="edit" onclick="openEdit()">Edit</button>
-  <button type="button" class="delete" onclick="openDelete()">Verwijder</button> 
-  </form> 
-</div>
-
-
   </body>
 </html>
