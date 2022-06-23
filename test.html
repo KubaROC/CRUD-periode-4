@@ -1,0 +1,36 @@
+<div class="vlucht-add">
+  <form method="POST">
+  <label>"locatie"</label>
+  <br>
+  <input name="locatie"></input>
+  <br>
+  <br>
+  <label>"Beschrijving"</label>
+  <br>
+  <br>
+  <textarea name="beschrijving"></textarea>
+  <div class="form-extended">
+  <label>"  "Reis ID"  "</label>
+  <br>
+  <input name="reisID"></input>
+  <br>
+  <br>
+  <div>
+  <label>"Vertrek datum"</label>
+  <br>
+  <input name="vertrektijd"type="datetime-local">
+  <br>
+  <br>
+  <label>"Aankomst datum"</label>
+  <br>
+  <input name="aankomsttijd" type="datetime-local" >
+  <br>
+  <br>
+  <label>"Prijs"</label>
+  <br>
+  <input name="prijs"></input>
+  </div> 
+  </div>
+  <input class="add" type="submit" value="Add" formaction="/php/updateFlightphp">
+  </form>
+  </div>

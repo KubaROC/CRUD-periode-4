@@ -23,3 +23,15 @@ function openDelete() {
 function options() {
   document.getElementById("options").style.display = "block";
 }
+function vluchtInfo(id) {
+  const vluchtInfos = document.querySelectorAll(".vlucht-info");
+
+  vluchtInfos.forEach((vluchtInfo) => {
+    vluchtInfo.style.display = "none";
+  });
+
+  vluchtInfos[id].style.display = "block";
+}
+function vluchtAdd(id) {
+  document.getElementById("vlucht-add").style.display = "block";
+}

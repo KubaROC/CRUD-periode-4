@@ -120,26 +120,6 @@ tr:nth-child(even) {
   z-index: 9;
 }
 
-.open {
-  background-color: rgb(22, 210, 126);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 15px;
-  width: 280px;
-}
-
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 177px;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-}
 .send {
   background-color: #04aa6d;
   color: white;
@@ -147,9 +127,10 @@ tr:nth-child(even) {
   border: none;
   cursor: pointer;
   position: fixed;
-  bottom: 127px;
-  right: 15px;
+  top: 50%;
+  left: 14%;
   width: 284px;
+  border-radius: 25px;
 }
 
 .add {
@@ -159,9 +140,10 @@ tr:nth-child(even) {
   border: none;
   cursor: pointer;
   position: fixed;
-  bottom: 127px;
+  bottom: 1%;
   right: 15px;
   width: 284px;
+  border-radius: 25px;
 }
 .edit {
   background-color: #c7b834;
@@ -171,6 +153,42 @@ tr:nth-child(even) {
   border: none;
   cursor: pointer;
 }
+.editForm {
+  background-color: #c7b834;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 43.7%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.deleteForm {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.addForm {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 17%;
+  width: 284px;
+  border-radius: 25px;
+}
 
 .delete {
   background-color: red;
@@ -179,15 +197,7 @@ tr:nth-child(even) {
   border-radius: 25px;
   border: none;
   cursor: pointer;
-}
-.form-popup input[type="text"] {
-  width: 280px;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  max-width: 200px;
 }
 .vlucht-box {
   border-radius: 25px;
@@ -199,4 +209,59 @@ tr:nth-child(even) {
   flex-direction: column;
   padding: 10px;
   margin: 10px;
+  text-align-last: center;
+}
+.vlucht-info {
+  width: 80%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(45, 214, 133);
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  border-radius: 25px;
+}
+.vlucht-add {
+  width: 70%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(45, 214, 133);
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  border-radius: 25px;
+}
+/* test */
+input {
+  border: 0px;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  text-align: center;
+}
+textarea {
+  border: 0px;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  width: 350px;
+  height: 200px;
+  resize: none;
+  outline: none;
+}
+.form-extended {
+  position: absolute;
+  top: 12.2%;
+  left: 65%;
+  text-align: center;
 }
