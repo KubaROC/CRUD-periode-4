@@ -1,0 +1,267 @@
+html {
+  background-color: rgb(207, 207, 207);
+}
+body {
+  font-family: sans-serif;
+}
+.main {
+  display: flex;
+}
+.login-box {
+  position: absolute;
+  top: 35%;
+  left: 47%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.login-box input[type="text"],
+select,
+input[type="password"] {
+  width: 150%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-box input[type="submit"] {
+  width: 150%;
+  background-color: rgb(74, 185, 213);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-box input[type="submit"]:hover {
+  background-color: #50b9e9;
+}
+.login-box h1 {
+  float: left;
+  font-size: 40px;
+  border-bottom: 2px solid rgb(74, 185, 213);
+  margin-bottom: 50px;
+  padding: 13px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(74, 185, 213);
+  height: 69px;
+  width: 100%;
+}
+.navbar p {
+  color: white;
+  font-size: 17px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 35%;
+}
+.link a {
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid rgb(36, 35, 35);
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.options {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.send {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+
+.add {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 1%;
+  right: 15px;
+  width: 284px;
+  border-radius: 25px;
+}
+.edit {
+  background-color: #c7b834;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.editForm {
+  background-color: #c7b834;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 43.7%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.deleteForm {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.addForm {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 17%;
+  width: 284px;
+  border-radius: 25px;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  max-width: 200px;
+}
+.vlucht-box {
+  border-radius: 25px;
+  background: rgb(53, 165, 193);
+  padding: 20px;
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  text-align-last: center;
+}
+.vlucht-info {
+  width: 80%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(45, 214, 133);
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  border-radius: 25px;
+}
+.vlucht-add {
+  width: 70%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(45, 214, 133);
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  border-radius: 25px;
+}
+/* test */
+input {
+  border: 0px;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  text-align: center;
+}
+textarea {
+  border: 0px;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  width: 350px;
+  height: 200px;
+  resize: none;
+  outline: none;
+}
+.form-extended {
+  position: absolute;
+  top: 12.2%;
+  left: 65%;
+  text-align: center;
+}

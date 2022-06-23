@@ -15,7 +15,7 @@
       <div class="link">
         <a href="admin.php"><p>Home</p></a>
         <a href="vluchten.php"><p>Vluchten</p></a>
-        <a href="reizen.php"><p>EMPTY</p></a>
+        <a href="gebruikers.php"><p>Gebruikers</p></a>
         <a href="contact.php"><p>EMPTY</p></a>
       </div>
     </div>
