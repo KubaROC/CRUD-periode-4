@@ -33,10 +33,9 @@ $count = 0;
 
 foreach ($conn->query($sql) as $row) {
   echo("<div class='vlucht-box'>");
-  echo("<h1>" . $row['locatie']. "</h1>");
-  echo("<p>" . $row['vertrektijd'] . " t/m " .$row['aankomsttijd']. "</p>");
-  echo("<p>" ."reis ID ". $row['reisID']. "</p>");
-  echo("<h3> € " . $row['prijs']. ",-</h3>");
+  echo("<h1>" . $row['username']. "</h1>");
+  echo("<p>" ."Permission level: ". $row['gebruikerID'] ."</p>");
+  echo("<p>" ."reis ID ". $row['admin']. "</p>");
   echo ("<button class='edit' onclick='vluchtInfo(".$count.")'>Edit</button>");
   echo("</div>");
   echo("<div class='vlucht-info'>");
