@@ -7,6 +7,6 @@
         <a href="overons.php"><p>Over ons</p></a>
         <a href="reizen.php"><p>Reizen</p></a>
         <a href="contact.php"><p>Contact</p></a>
-        <a href="account.php"><p>Account</p></a>
+        <a href="accountlogin.php"><p>Account</p></a>
     </div>
 </div>
