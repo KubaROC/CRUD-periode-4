@@ -34,45 +34,42 @@ $count = 0;
 foreach ($conn->query($sql) as $row) {
   echo("<div class='vlucht-box'>");
   echo("<h1>" . $row['username']. "</h1>");
-  echo("<p>" ."Permission level: ". $row['gebruikerID'] ."</p>");
-  echo("<p>" ."reis ID ". $row['admin']. "</p>");
+  echo("<p>" ."Gebruker ID: ". $row['gebruikerID'] ."</p>");
+  $a = 0;
+  if ($row['admin'] > $a) {
+    $a = 'true';
+  }else{
+    $a = 'false';
+  }
+  if (empty($row['mail'])) { 
+    $mail = 'No mail registered';
+  }
+
+  echo("<p>" ."Is an admin: ". $a . "</p>");
   echo ("<button class='edit' onclick='vluchtInfo(".$count.")'>Edit</button>");
   echo("</div>");
   echo("<div class='vlucht-info'>");
   echo("<form method='POST'>");
   echo("<label>" . 'locatie' . "</label>");
   echo("<br>");
-  echo ("<input name='locatie' value='".$row['locatie']."'></input>");
+  echo ("<input name='Username' value='".$row['username']."'></input>");
   echo("<br>");
   echo("<br>");
-  echo("<label>" . 'Beschrijving' . "</label>");
+  echo("<label>" . 'Gebruikers ID' . "</label>");
   echo("<br>");
-  echo("<br>");
-  echo ("<textarea name='beschrijving'> ".$row['beschrijving']."</textarea>");
-  echo("<div class='form-extended'>");
-  echo("<label>" . 'Reis ID' . "</label>");
-  echo("<br>");
-  echo ("<input name='reisID' value='".$row['reisID']."'></input>");
+  echo ("<input name='gebruikerID' value='".$row['gebruikerID']."'></input>");
   echo("<br>");
   echo("<br>");
   echo("<div>");
-  echo("<label>" . 'Vertrek datum' . "</label>");
+  echo("<label>" . 'Admin priviliges' . "</label>");
   echo("<br>");
-  echo("<input name='vertrektijd' value='".$row['vertrektijd']."' type='datetime-local'>");
-  echo("<br>");
-  echo("<br>");
-  echo("<label>" . 'Aankomst datum' . "</label>");
-  echo("<br>");
-  echo("<input name='aankomsttijd' value='".$row['aankomsttijd']."' type='datetime-local' >");
+  echo("<input name='admin' value='".$a."'>");
   echo("<br>");
   echo("<br>");
-  echo("<label>" . 'Prijs' . "</label>");
+  echo("<label>" . 'E-mail' . "</label>");
   echo("<br>");
-  echo ("<input name='prijs' value='".$row['prijs']."'></input>");
+  echo("<input name='mail' value='". $mail ."'>");
   echo("</div>"); 
-  echo("</div>");
-  echo("<input class='editForm' type='submit' value='Edit' formaction='../php/updateFlight.php'>");
-  echo("<input class='deleteForm' type='submit' value='Delete' formaction='../php/remove.php'>");
   echo("</form>");
   echo("</div>");
   $count++;
