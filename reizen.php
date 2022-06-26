@@ -22,6 +22,9 @@
   <body>
     <?php include('./includes/header.php'); ?>
     <div class="reizencontainer">
+      <div class="reizentekst">
+        <h1>Op deze pagina kunt u uw favoriete reizen boeken! U heeft de keuze uit vele leuke bestemmingen. U kunt u zich ook altijd weer uitschrijven. Veel plezier!</h1>
+      </div>
       <?php  
         include_once('includes/reizenconnection.php');
 
@@ -34,19 +37,16 @@
       <div class="reisbox">
         <div class="reisboven">
           <div class="reisbovenlinks">
-            <div class="reisafbeelding">
-              <p>Afbeelding Barcelona</p>
-            </div>
             <div class="reisprijs">
-              <p><?php echo $result['prijs']; ?> euro</p>
+              <p><?php echo $result['locatie']; ?></p>
+            </div>
+            <div class="reislocatie">
+            <p>€<?php echo $result['prijs']; ?></p>
             </div>
           </div>
 
           <div class="reisbovenrechts">
-            <div class="reisnaam">
-            <p><?php echo $result['locatie']; ?></p>
-            </div>
-            <div class="reisbeschrijving">
+            <div class="reisalgemeen">
               <p>
               <p><?php echo $result['algemeen']; ?></p>
               </p>
@@ -56,13 +56,15 @@
 
         <div class="reismidden">
           <div class="reismiddenlinks">
-            <div class="reisvertrektijd">
+            <div class="reisbegindatum">
+              <p>Begindatum:</p>
             <p><?php echo $result['beginDatum']; ?></p>
             </div>
           </div>
 
           <div class="reismiddenrechts">
-            <div class="reisaankomsttijd">
+            <div class="reiseinddatum">
+              <p>Einddatum:</p>
             <p><?php echo $result['eindDatum']; ?></p>
             </div>
           </div>
@@ -71,16 +73,12 @@
         <div class="reisonder">
           <div class="reisonderlinks">
             <div class="boeken">
-              <p>Button voor boeken</p>
+              <Button>Boeken</Button>
             </div>
           </div>
-
           <div class="reisonderrechts">
-            <div class="bewerken">
-              <p>Button voor bewerken</p>
-            </div>
             <div class="verwijderen">
-              <p>Button voor verwijderen</p>
+            <Button>Verwijderen</Button>
             </div>
           </div>
         </div>

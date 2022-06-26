@@ -292,9 +292,19 @@ h6 {
   width: 100%;
 }
 
+.reizentekst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
 .reisbox {
-  height: 600px;
-  width: 400px;
+  height: 450px;
+  width: 450px;
   background-color: rgb(75, 189, 217);
   border-radius: 30px;
   margin: 20px;
@@ -303,10 +313,13 @@ h6 {
 .reisboven {
   display: flex;
   flex-wrap: wrap;
-  height: 50%;
+  height: 30%;
   width: 100%;
 }
 .reisbovenlinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
   width: 50%;
 }
@@ -328,11 +341,14 @@ h6 {
 }
 
 .reisbovenrechts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 50%;
 }
 
-.reisnaam {
+.reislocatie {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +356,7 @@ h6 {
   width: 100%;
 }
 
-.reisbeschrijving {
+.reisalgemeen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +378,7 @@ h6 {
   width: 50%;
 }
 
-.reisvertrektijd {
+.reisbegindatum {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,7 +391,7 @@ h6 {
   width: 50%;
 }
 
-.reisaankomsttijd {
+.reiseinddatum {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,51 +426,39 @@ h6 {
   width: 50%;
 }
 
-.bewerken {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-}
-
 .verwijderen {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 
-*/ */ .vlucht-box {
-  border-radius: 25px;
-  background: rgb(53, 165, 193);
-  padding: 20px;
-  width: 200px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  text-align-last: center;
-}
-.vlucht-info {
-  width: 80%;
-  padding: 50px 0;
+.boeken button {
+  background-color: white;
+  border: none;
+  color: rgb(75, 189, 217);
+  padding: 15px 32px;
   text-align: center;
-  background-color: rgb(45, 214, 133);
-  margin-top: 20px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  z-index: 1;
-  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.verwijderen button {
+  background-color: white;
+  border: none;
+  color: rgb(75, 189, 217);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .accountpagina {
   display: flex;
+  flex-wrap: nowrap;
   height: auto;
   width: 100%;
 }
@@ -478,6 +482,11 @@ h6 {
   height: 40%;
   width: 100%;
   padding: 50px;
+}
+
+.profielfoto img {
+  height: 200px;
+  width: 200px;
 }
 
 .profielnaam {

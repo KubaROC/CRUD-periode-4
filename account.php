@@ -21,14 +21,21 @@
   </head>
   <body>
     <?php include('./includes/header.php'); ?>
+    <!-- <?php  
+        include_once('includes/connection.php');
+
+        $stmt = $conn->prepare("SELECT * FROM gebruikers");
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        ?> -->
     <div class="accountpagina">
       <div class="accountlinks">
         <div class="persoonlijkeinfo">
           <div class="profielfoto">
-            <p>Profielfoto</p>
+          <img src="Images/profielfoto.png" />
           </div>
           <div class="profielnaam">
-            <p>Profielnaam</p>
+            <!-- <p><?php echo $results['username']; ?></p> -->
           </div>
           <div class="profieloverigeinfo">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores veniam? Sed, perspiciatis neque fuga maiores aliquam perferendis? Nemo mollitia quam culpa blanditiis asperiores sapiente, deleniti eveniet praesentium ipsum cumque.</p>
@@ -43,46 +50,26 @@
           <div class="accountreizenheader">
             <p>Geboekte reizen</p>
           </div>
+          <?php  
+            include_once('includes/connection.php');
+
+            $stmt = $conn->prepare("SELECT * FROM reizen");
+            $stmt->execute();
+            $results = $stmt->fetchAll();
+
+            foreach ($results as $result) {
+            ?>
           <div class="accountreis">
             <div class="accountreisnaam">
-              <p>Barcelona</p>
+              <p><?php echo $result['locatie'];?></p>
             </div>
             <div class="annuleerknop">
               <p>Annuleer boeking</p>
             </div>
           </div>
-          <div class="accountreis">
-            <div class="accountreisnaam">
-              <p>Athene</p>
-            </div>
-            <div class="annuleerknop">
-              <p>Annuleer boeking</p>
-            </div>
-          </div>
-          <div class="accountreis">
-            <div class="accountreisnaam">
-              <p>Hawaii</p>
-            </div>
-            <div class="annuleerknop">
-              <p>Annuleer boeking</p>
-            </div>
-          </div>
-          <div class="accountreis">
-            <div class="accountreisnaam">
-              <p>New York</p>
-            </div>
-            <div class="annuleerknop">
-              <p>Annuleer boeking</p>
-            </div>
-          </div>
-          <div class="accountreis">
-            <div class="accountreisnaam">
-              <p>Berlijn</p>
-            </div>
-            <div class="annuleerknop">
-              <p>Annuleer boeking</p>
-            </div>
-          </div>
+            <?php
+              }
+          ?>
         </div>
       </div>
     </div>
