@@ -22,7 +22,7 @@
   </head>
   <body>
     <?php include('./includes/header.php'); ?>
-    <!-- <?php  
+    <?php  
         include_once('includes/connection.php');
 
         $stmt = $conn->prepare("SELECT * FROM gebruikers");
