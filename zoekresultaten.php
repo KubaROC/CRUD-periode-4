@@ -62,27 +62,31 @@
 
               
               $zoekvraag = $_GET['zoekbalk'];
-              $gerechtMetLike = '%'.$zoekvraag.'%';
+              $reisMetLike = '%'.$zoekvraag.'%';
 
 
-              $query = "SELECT * FROM gerechten WHERE naam LIKE :gerecht";
-              $stmt = $connect->prepare($query);
-              $stmt->bindParam(':gerecht', $gerechtMetLike);
+              $query = "SELECT * FROM reizen WHERE `locatie` LIKE :locatie";
+              $stmt = $conn->prepare($query);
+              $stmt->bindParam(':locatie', $reisMetLike, PDO::PARAM_STR);
               $stmt->execute();
 
               $result = $stmt->fetchAll();
 
-              foreach($result as $product) {
+              foreach($result as $reis) {
                 ?>
 
                 <div class="zoekresultaat">
                   <div class="reisnaam">
-                    <p><?php echo $product['locatie']; ?></p>
+                    <p><?php echo $reis['locatie']; ?></p>
                   </div>
                   <div class="reisprijs">
-                    <p>€<?php echo $product['prijs']; ?>,-</p>
+                    <p>€<?php echo $reis['prijs']; ?>,-</p>
                   </div>
-                </div> 
+                </div>
+                <?php
+                }
+              ?>
+              
     </div>
     <?php include('./includes/footer.php'); ?>
   </body>
