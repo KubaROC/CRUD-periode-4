@@ -177,6 +177,43 @@ tr:nth-child(even) {
   width: 284px;
   border-radius: 25px;
 }
+.editUser {
+  background-color: #c7b834;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 41.7%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.deleteUser {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 48%;
+  left: 14%;
+  width: 284px;
+  border-radius: 25px;
+}
+.deleteBoeking {
+  background-color: red;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 42%;
+  left: 41%;
+  width: 284px;
+  border-radius: 25px;
+}
+
 .addForm {
   background-color: #04aa6d;
   color: white;
