@@ -24,52 +24,39 @@ include_once('../includes/connection.php'); ?>
       </div>
     </div>
     <div class="main">
-    <div class="main">
 
 
 
 <?php  
-$sql = 'SELECT * FROM gebruikers';
+$sql = 'SELECT * FROM boekingen';
 $count = 0;
 
 foreach ($conn->query($sql) as $row) {
   echo("<div class='vlucht-box'>");
-  echo("<h1>" . $row['username']. "</h1>");
-  echo("<p>" ."Gebruker ID: ". $row['gebruikerID'] ."</p>");
-  if (empty($row['mail'])) { 
-    $mail = 'No mail registered';
-  }else{
-    $mail = $row['mail'];
-  }
-
-  echo("<p>" ."Is an admin: ". $row['admin'] . "</p>");
+  echo("<h2> GebruikerID:   " . $row['gebruikerID']. "</h2>");
+  echo("<h3>" ."ReisID: ". $row['reisID']. "</h3>");
+  echo("<h3> BoekingID: " . $row['boekingID']. "</h3>");
   echo ("<button class='edit' onclick='vluchtInfo(".$count.")'>Edit</button>");
   echo("</div>");
   echo("<div class='vlucht-info'>");
   echo("<form method='POST'>");
-  echo("<label>" . 'username' . "</label>");
-  echo("<br>");
-  echo ("<input name='username' value='".$row['username']."'></input>");
-  echo("<br>");
-  echo("<br>");
-  echo("<label>" . 'Gebruikers ID' . "</label>");
+  echo("<label>" . 'Gebruiker ID' . "</label>");
   echo("<br>");
   echo ("<input name='gebruikerID' value='".$row['gebruikerID']."'></input>");
   echo("<br>");
   echo("<br>");
+  echo("<label>" . 'Reis ID' . "</label>");
+  echo("<br>");
+  echo ("<input name='reisID' value='".$row['reisID']."'></input>");
+  echo("<br>");
+  echo("<br>");
   echo("<div>");
-  echo("<label>" . 'Admin priviliges' . "</label>");
+  echo("<label>" . 'Boeking ID' . "</label>");
   echo("<br>");
-  echo("<input name='admin' value='" .$row['admin']."'>");
-  echo("<br>");
-  echo("<br>");
-  echo("<label>" . 'E-mail' . "</label>");
-  echo("<br>");
-  echo("<input name='mail' value='". $mail ."'>");
-  echo("<input class='editUser' type='submit' value='Edit' formaction='../php/updateUser.php'>");
-  echo("<input class='deleteUser' type='submit' value='Delete' formaction='../php/removeUser.php'>");
-  echo("</div>"); 
+  echo("<input name='boekingID' value='".$row['boekingID']."'>");
+  echo("<input class='deleteBoeking' type='submit' value='Delete' formaction='../php/removeBooking.php'>");
   echo("</form>");
+  echo("</div>");
   echo("</div>");
   $count++;
 }

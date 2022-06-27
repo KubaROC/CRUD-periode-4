@@ -19,7 +19,8 @@ include_once('../includes/connection.php'); ?>
         <a href="admin.php"><p>Home</p></a>
         <a href="vluchten.php"><p>Vluchten</p></a>
         <a href="gebruikers.php"><p>Gebruikers</p></a>
-        <a href="contact.php"><p>EMPTY</p></a>
+        <a href="bookings.php"><p>Bookings</p></a>
+        <a href="../php/logout.php"><p>Logout</p></a>
       </div>
     </div>
     <div class="main">
