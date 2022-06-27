@@ -52,6 +52,13 @@
           </p>
         </div>
       </div>
+      <div class="zoekbalk">
+          <div class="zoekbalktekst"><p>Zoek uw favoriete bestemming:</p></div>
+          <form action="zoekresultaten.php">
+            <input type="text" name="zoekbalk">
+            <input type="submit" name="submit" value="Zoeken">
+          </form>
+        </div>
     </div>
     <?php include('./includes/footer.php'); ?>
   </body>

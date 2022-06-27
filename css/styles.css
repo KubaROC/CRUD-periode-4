@@ -118,6 +118,76 @@ h6 {
   text-align: center;
 }
 
+.zoekbalk {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.zoekbalktekst {
+  height: 100%;
+  width: 20%;
+}
+
+.zoekbalktekst p {
+  font-size: 18px;
+}
+
+.zoekresultaatcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.zoekresultaten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  padding: 20px;
+}
+
+.zoekresultatentekst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  padding: 20px;
+}
+
+input[type="text"] {
+  float: left;
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: rgb(75, 189, 217);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 148px;
+  font-size: 20px;
+}
+
 .zoekresultaatcontainer {
   height: auto;
   width: 100%;
