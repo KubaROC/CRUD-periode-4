@@ -69,17 +69,9 @@
             </div>
           </div>
         </div>
-
         <div class="reisonder">
-          <div class="reisonderlinks">
-            <div class="boeken">
-              <Button>Boeken</Button>
-            </div>
-          </div>
-          <div class="reisonderrechts">
-            <div class="verwijderen">
-            <Button>Verwijderen</Button>
-            </div>
+          <div class="boeken">
+            <Button>Boeken</Button>
           </div>
         </div>
       </div>
