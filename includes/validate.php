@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
         ($user['password'] == $password) &&
         ($user['admin'] == '1')) {
             session_start();
-            $_SESSION["name"] = 'admin';
+            $_SESSION["admin"] = 'admin';
 
             header("Location: ../admin/admin.php");
             exit();
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
         ($user['password'] == $password) &&
         ($user['admin'] == '0')) {
             session_start();
-            $_SESSION["name"] = 'gebruiker';
+            $_SESSION["gebruiker"] = 'gebruiker';
 
             header("Location: ../account.php");
             exit();

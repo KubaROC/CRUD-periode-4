@@ -42,7 +42,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores veniam? Sed, perspiciatis neque fuga maiores aliquam perferendis? Nemo mollitia quam culpa blanditiis asperiores sapiente, deleniti eveniet praesentium ipsum cumque.</p>
           </div>
           <div class="logoutknop">
-            <button>Logout</button>
+            <button action=>Logout</button>
           </div>
         </div>
       </div>

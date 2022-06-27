@@ -1,4 +1,4 @@
-<?php include_once('../includes/session.php');
+<?php include_once('../includes/adminSession.php');
 include_once('../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +11,9 @@ include_once('../includes/connection.php'); ?>
   </head>
   <body>
     <div class="navbar">
-      <div class="logo">
-        <p>Logo</p>
-      </div>
+    <div class="logo">
+        <img src="../Images/logo.png" width="50" height="50">
+    </div>
       <div class="link">
         <a href="admin.php"><p>Home</p></a>
         <a href="vluchten.php"><p>Vluchten</p></a>
@@ -22,5 +22,8 @@ include_once('../includes/connection.php'); ?>
         <a href="../php/logout.php"><p>Logout</p></a>
       </div>
     </div>
+    <script>
+      https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+    </script>
   </body>
 </html>

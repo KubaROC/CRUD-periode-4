@@ -10,11 +10,12 @@
   <body>
     <div class="login-box">
       <h1>Login</h1>
-      <form action="includes/validate.php" method="POST">
+      <form action="php/register.php" method="POST">
         <input type="text" name="username" placeholder="Username" /><br />
+        <input type="text" name="mail" placeholder="E-mail" /><br />
         <input type="password" name="password" placeholder="Password" /><br />
-        <input class="login" type="submit" value="Login" />
-        <input class='login' type='submit' value='Register' formaction='register.php'>
+        <input class="login" type="submit" value="Register" />
+        <input class='login' type='submit' value='Go to login' formaction='accountlogin.php'>
 
         
       </form>
