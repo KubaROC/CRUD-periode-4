@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION["name"])){
-        header("Location: ../admin/adminLogin.php");
+    if(!isset($_SESSION["gebruiker"])){
+        header("Location: ../accountlogin.php");
         exit();
     }
 ?>
